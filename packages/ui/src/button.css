@@ -1,0 +1,16 @@
+/* button.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button {
+  @apply bg-blue-500 px-4 py-2 rounded-md text-white text-center;
+}
+
+.button_large {
+  @apply text-xl md:text-2xl px-6 py-3;
+}
+
+.button_small {
+  @apply text-sm md:text-base px-2 py-1;
+}

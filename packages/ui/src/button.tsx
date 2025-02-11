@@ -1,38 +1,27 @@
-import * as React from "react";
-import {
-  StyleSheet,
-  GestureResponderEvent,
-  Text,
-  Pressable,
-} from "react-native";
+import { Text, Pressable, Platform } from "react-native";
+import { twMerge } from "tailwind-merge";
+import "./button.css";
 
 export interface ButtonProps {
   text: string;
-  onClick?: (event: GestureResponderEvent) => void;
+  onPress?: () => void;
+  size?: "small" | "large";
 }
 
-export function Button({ text, onClick }: ButtonProps) {
+export function Button({ text, onPress, size = "large" }: ButtonProps) {
+  const sizeClass = size === "small" ? "button_small" : "button_large";
+
+  if (Platform.OS === "web") {
+    return (
+      <button className={`button ${sizeClass}`} onClick={onPress}>
+        {text}
+      </button>
+    );
+  }
+
   return (
-    <Pressable style={styles.button} onPress={onClick}>
-      <Text style={styles.text}>{text}</Text>
+    <Pressable onPress={onPress} className={twMerge("button", sizeClass)}>
+      <Text className={twMerge("text-white text-center")}>{text}</Text>
     </Pressable>
   );
 }
-
-const styles = StyleSheet.create({
-  button: {
-    maxWidth: 200,
-    textAlign: "center",
-    borderRadius: 10,
-    paddingTop: 14,
-    paddingBottom: 14,
-    paddingLeft: 30,
-    paddingRight: 30,
-    fontSize: 15,
-    backgroundColor: "#2f80ed",
-  },
-  text: {
-    color: "white",
-    textAlign: "center",
-  },
-});
