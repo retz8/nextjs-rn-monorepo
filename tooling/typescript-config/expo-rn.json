@@ -1,5 +1,5 @@
 {
-  "display": "Next.js",
+  "display": "Expo React Native",
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "./base.json",
   "compilerOptions": {
@@ -7,15 +7,15 @@
     "declaration": false,
     "declarationMap": false,
     "incremental": true,
-    "jsx": "preserve",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
+    "jsx": "react-native",
+    "lib": ["ESNext"],
+    "module": "CommonJS",
     "noEmit": true,
     "resolveJsonModule": true,
     "strict": true,
-    "target": "es2020",
+    "target": "ES2020",
     "skipLibCheck": true
   },
-  "include": ["src", "next-env.d.ts"],
-  "exclude": ["node_modules", "dist", ".next"]
+  "include": ["src", "expo-env.d.ts"],
+  "exclude": ["node_modules", "dist"]
 }
