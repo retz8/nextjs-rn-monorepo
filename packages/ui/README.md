@@ -162,24 +162,11 @@ To ensure the correct module format is used in different environments, the `pack
   "module": "./dist/index.esm.js",
   "types": "./dist/index.d.ts",
   "exports": {
-    "import": "./dist/index.esm.js",
-    "require": "./dist/index.cjs",
-    "react-native": "./dist/index.esm.js",
     "default": "./dist/index.esm.js"
   },
   "sideEffects": false
 }
 ```
-
-### **📌 Explanation of `exports`**
-
-| Key                                         | Usage                                                     |
-| ------------------------------------------- | --------------------------------------------------------- |
-| **`"import": "./dist/index.esm.js"`**       | Used for modern ESModules (Next.js & Web environments).   |
-| **`"require": "./dist/index.cjs"`**         | Used for CommonJS environments (Node.js, older bundlers). |
-| **`"react-native": "./dist/index.esm.js"`** | Ensures React Native uses the ESModule version.           |
-| **`"default": "./dist/index.esm.js"`**      | Default export behavior for better compatibility.         |
-| **`"sideEffects": false`**                  | Enables tree-shaking for optimal bundle size.             |
 
 ---
 
@@ -187,7 +174,6 @@ To ensure the correct module format is used in different environments, the `pack
 
 - **Uses `tsup` for fast and efficient TypeScript bundling** ✅
 - **Supports both `cjs` and `esm` for compatibility across different environments** ✅
-- **Externalizes `react` and `react-native` to avoid unnecessary bundling issues** ✅
 - **Generates TypeScript declaration files (`.d.ts`) for better TypeScript support** ✅
 - **Optimized for React Native and Next.js with correct `exports` configuration** ✅
 

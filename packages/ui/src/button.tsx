@@ -13,8 +13,9 @@ export function Button({ text, onPress, size = "large" }: ButtonProps) {
 
   if (Platform.OS === "web") {
     return (
-      <button className={`button ${sizeClass}`} onClick={onPress}>
+      <button className={`button ${sizeClass}`} onClick={onPress} type="button">
         {text}
+        <span>배고프다</span>
       </button>
     );
   }
