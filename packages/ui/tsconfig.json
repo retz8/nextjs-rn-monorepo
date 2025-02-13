@@ -4,6 +4,7 @@
   "exclude": ["dist", "build", "node_modules"],
   "compilerOptions": {
     "strict": true,
-    "types": ["nativewind/types"]
+    "types": ["node", "nativewind/types"],
+    "jsx": "react-jsx"
   }
 }

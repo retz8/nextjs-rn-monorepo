@@ -1,6 +1,4 @@
-import { Config } from "tailwindcss";
-
-const config: Config = {
+const uiConfig = {
   content: ["./src/**/*.{js,ts,jsx,tsx,css}"],
   presets: [require("nativewind/preset")],
   theme: {
@@ -9,4 +7,4 @@ const config: Config = {
   plugins: [],
 };
 
-export default config;
+export default uiConfig;

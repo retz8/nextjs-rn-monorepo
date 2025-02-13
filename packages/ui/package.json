@@ -1,35 +1,50 @@
 {
   "name": "@repo/ui",
   "version": "0.0.0",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
-  "sideEffects": false,
+  "main": "./dist/web/index.js",
+  "types": "./dist/web/index.d.ts",
+  "exports": {
+    "./native": {
+      "types": "./src/index.native.ts",
+      "default": "./dist/native/index.js"
+    },
+    "./web": {
+      "types": "./src/index.web.ts",
+      "default": "./dist/web/index.js"
+    },
+    "./css": "./dist/web/index.css",
+    "./tailwind-preset": "./tailwind-preset.js"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "build": "tsup",
-    "dev": "tsup --watch",
+    "dev": "tsup --watch --silent",
     "clean": "rm -rf dist && rm -rf node_modules"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@tailwindcss/postcss": "4.0.6",
+    "@types/node": "^20.10.6",
     "@types/react": "^19",
-    "@types/react-native": "^0.73.0",
-    "postcss": "8.5.2",
-    "tsup": "^8.0.1",
-    "typescript": "^5.7.3",
+    "@types/react-dom": "^19",
+    "@types/react-native": "0.73.0",
+    "nativewind": "4.1.23",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-native": "0.74.5",
-    "tailwindcss": "4.0.6",
-    "nativewind": "4.1.23"
+    "tailwindcss": "3.4.17",
+    "tsup": "^8.0.1",
+    "typescript": "^5.7.3"
   },
   "peerDependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "react-native": "0.74.5",
-    "tailwindcss": "4.0.6",
-    "nativewind": "4.1.23"
+    "nativewind": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-native": "*",
+    "tailwindcss": "*"
   },
   "peerDependenciesMeta": {
     "react": {
@@ -39,12 +54,6 @@
       "optional": true
     },
     "react-native": {
-      "optional": true
-    },
-    "tailwindcss": {
-      "optional": true
-    },
-    "nativewind": {
       "optional": true
     }
   },

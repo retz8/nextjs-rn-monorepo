@@ -9,7 +9,7 @@
     "incremental": true,
     "jsx": "react-native",
     "lib": ["ESNext"],
-    "module": "CommonJS",
+    "module": "esnext",
     "noEmit": true,
     "resolveJsonModule": true,
     "strict": true,
