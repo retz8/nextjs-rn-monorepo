@@ -15,6 +15,10 @@
     "lint": {},
     "clean": {
       "cache": false
+    },
+    "install": {
+      "cache": false,
+      "dependsOn": ["^install"]
     }
   }
 }

@@ -1,17 +1,18 @@
 {
   "display": "Hybrid UI Library (React + React Native)",
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "./base.json",
   "compilerOptions": {
+    "target": "es2018",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "jsx": "preserve",
     "allowJs": true,
-    "jsx": "react-jsx",
-    "lib": ["DOM", "ESNext"],
-    "noEmit": false,
+    "noEmit": true,
     "resolveJsonModule": true,
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
+    "isolatedModules": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
     "skipLibCheck": true,
-    "target": "ES2020",
     "types": ["react", "react-native"]
   }
 }
