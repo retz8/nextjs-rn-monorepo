@@ -4,11 +4,12 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "dev": "expo start --web",
+    "dev": "expo start --clear",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "clean": "rm -rf node_modules && rm -rf .expo"
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
