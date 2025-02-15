@@ -28,7 +28,21 @@
   > **[IMPORTANT]** > `include` and `exclude` are not inherited from the base config,
   > you must define them in each package's `tsconfig.json`.
 
-## Notes
+## Useful Commands
+
+#### `pnpm turbo ls`
+
+list all the packages and apps in the monorepo. Also shows where they are located.
+
+#### `pnpm turbo ls --filter ...<package-name>`
+
+List all the package and apps that depends on (or itself) the given filter package
+
+#### `pnpm turbo run`
+
+List all the tasks that can be run in the monorepo. Each task also includes app and package names that it can be run on.
+
+## Dev Notes
 
 `rn-web` branch: I will try using "react-native-web" for ui package.
 
