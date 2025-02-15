@@ -4,8 +4,6 @@
 
 ### `turbo.json`
 
-This json file is the main configuration
-
 #### `tasks`
 
 1. `build`
@@ -18,5 +16,10 @@ This json file is the main configuration
 }
 ```
 
-- `dependsOn`: when running the task, it will run the tasks with same name in "dependencies" first, then run the task on "dependents". (This is critical for running the task in the expected order)
-- `outputs`: defines which files and directories should be cached. It uses glob pattern, so dist/\*\* handles dist folder for each package, respectively. (Current build's output is set to cover Next.js and tsup's build output )
+- `dependsOn`: when running the task, it will run the tasks with same name in "dependencies" first, then run the task on "dependents".
+
+(This is critical for running the task in the expected order)
+
+- `outputs`: defines which files and directories should be cached. It uses glob pattern, so dist/\*\* handles dist folder for each package, respectively.
+
+(Current build's output is set to cover Next.js and tsup's build output )
