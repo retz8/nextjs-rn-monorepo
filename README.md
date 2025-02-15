@@ -15,8 +15,8 @@
 
   > ex) `node_modules` - packages are compiled in their own packages, no need to compile them again with TS
 
-  > [!IMPORTANT]
-  > `include` and `exclude` are not inherited from the base config, you must define them in each package's `tsconfig.json`
+  > [!IMPORTANT] > `include` and `exclude` are not inherited from the base config,
+  > you must define them in each package's `tsconfig.json`.
 
 ## Notes
 
