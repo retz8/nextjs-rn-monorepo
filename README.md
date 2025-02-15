@@ -5,7 +5,8 @@
 ### `tsconfig.json`
 
 - `extends`: "@repo/typescript-config/base"
-  > [!NOTE]
+
+  > [NOTE]
   > You can use different extends options provided by "@repo/typescript-config"
 
 ## Notes
