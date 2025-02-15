@@ -9,6 +9,15 @@
   > [NOTE]
   > You can use different extends options provided by "@repo/typescript-config"
 
+- `include`: defines the files that should be compiled in TS
+
+- `exclude`: defines the files that should not be compiled in TS
+
+  > ex) `node_modules` - packages are compiled in their own packages, no need to compile them again with TS
+
+  > [!IMPORTANT]
+  > `include` and `exclude` are not inherited from the base config, you must to define them in each package's `tsconfig.json`
+
 ## Notes
 
 `rn-web` branch: I will try using "react-native-web" for ui package.
