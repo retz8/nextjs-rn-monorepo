@@ -2,7 +2,7 @@
 
 ## Internal Packages
 
-### `tsconfig.json`
+#### `tsconfig.json`
 
 - `extends`: "@repo/typescript-config/base"
 
