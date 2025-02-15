@@ -11,7 +11,7 @@
 
 - `compilerOptions`
 
-  - `strict`: true
+  - `strict`: if it's true, it will enable all the strict type checking options
     > [NOTE]
     > most of the `tsconfig.json` in this repo are using `strict: true` option.
   - `paths`: defines the paths to the packages
