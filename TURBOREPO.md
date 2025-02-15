@@ -4,7 +4,7 @@
 
 ### `turbo.json`
 
-#### `tasks: build`
+#### `build`
 
 building apps and packages throughout the monorepo
 
@@ -29,7 +29,7 @@ building apps and packages throughout the monorepo
 - `outputs`: defines which files and directories should be cached. It uses glob pattern, so dist/\*\* handles dist folder for each package, respectively.
   (Current build's output is set to cover Next.js and tsup's build output )
 
-#### `tasks: dev`
+#### `dev`
 
 running the dev (local) server for the apps and packages throughout the monorepo
 
@@ -43,7 +43,7 @@ running the dev (local) server for the apps and packages throughout the monorepo
 - `cache`: disables caching for this task (this is obvious, because dev environment is meant to be volatile)
 - `persistent`: ensures the task continues running indefinitely instead of stopping after execution
 
-#### `tasks: clean`
+#### `clean`
 
 cleaning the cache for the monorepo (node_modules, dist, .expo, etc.)
 
@@ -53,6 +53,6 @@ cleaning the cache for the monorepo (node_modules, dist, .expo, etc.)
 }
 ```
 
-#### `tasks: lint`
+#### `lint`
 
 WIP
