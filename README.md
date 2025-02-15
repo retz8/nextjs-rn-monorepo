@@ -1,5 +1,13 @@
 # Nextjs + ReactNative Monorepo Micro Frontend
 
+## Internal Packages
+
+### `tsconfig.json`
+
+- `extends`: "@repo/typescript-config/base"
+  > [!NOTE]
+  > You can use different extends options provided by "@repo/typescript-config"
+
 ## Notes
 
 `rn-web` branch: I will try using "react-native-web" for ui package.
