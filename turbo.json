@@ -9,16 +9,13 @@
     },
     "dev": {
       "cache": false,
-      "persistent": true,
-      "inputs": ["node_modules/**"]
+      "persistent": true
     },
-    "lint": {},
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
     "clean": {
       "cache": false
-    },
-    "install": {
-      "cache": false,
-      "dependsOn": ["^install"]
     }
   }
 }
