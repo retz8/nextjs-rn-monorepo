@@ -2,9 +2,12 @@
 
 ## Notes
 
+`rn-web` branch: I will try using "react-native-web" for ui package.
+
 ### Starting guides
 
 - need to install pnpm globally first
+- I think using rimraf is a good idea for cleaning up the dist folder completely.
 
 ### Tool & Dependency Versions
 

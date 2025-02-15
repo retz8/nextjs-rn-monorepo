@@ -1,9 +1,8 @@
 {
   "extends": "@repo/typescript-config/react-rn-hybrid-library",
   "compilerOptions": {
-    "strict": true,
-    "types": ["react", "react-native", "nativewind/types"]
+    "strict": true
   },
-  "include": ["src"],
+  "include": ["."],
   "exclude": ["dist", "build", "node_modules"]
 }

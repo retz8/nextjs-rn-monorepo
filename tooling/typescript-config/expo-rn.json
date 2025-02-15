@@ -8,7 +8,6 @@
     "module": "esnext",
     "moduleResolution": "bundler",
     "jsx": "react-native",
-    "types": ["react-native"],
     "allowJs": true,
     "incremental": true,
     "esModuleInterop": true,

@@ -1,67 +1,49 @@
 {
   "private": true,
   "name": "@repo/ui",
-  "version": "1.0.0",
-  "description": "UI components with TailwindCSS for web and native",
+  "version": "0.1.0",
+  "description": "UI components with React Native Web for web and native",
   "author": "Jioh In <ekkicb71@gmail.com>",
   "license": "MIT",
   "exports": {
-    "./native": {
-      "types": "./src/index.native.ts",
-      "default": "./dist/native/index.js"
+    "./button": {
+      "types": "./src/button/index.ts",
+      "default": "./dist/button/index.js"
     },
-    "./web": {
-      "types": "./src/index.web.ts",
-      "default": "./dist/web/index.js"
-    },
-    "./css": "./dist/css/index.css"
+    "./card": {
+      "types": "./src/card/index.ts",
+      "default": "./dist/card/index.js"
+    }
   },
   "files": [
-    "dist/web",
-    "dist/native",
-    "dist/css"
+    "dist/*"
   ],
   "sideEffects": [
-    "**/*.css"
+    "*"
   ],
   "scripts": {
     "dev": "tsup --watch",
     "build": "tsup --clean ",
-    "clean": "rimraf dist",
+    "clean": "rimraf dist && rimraf node_modules",
     "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "fs-extra": "11.3.0",
-    "tailwind-merge": "^3.0.1"
   },
   "devDependencies": {
     "@repo/tailwind-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "^20.10.6",
     "@types/react": "^18.3.18",
-    "@types/react-dom": "^18.3.5",
-    "@types/react-native": "^0.73.0",
-    "nativewind": "^4.1.23",
+    "@types/react-native": "0.73.0",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-native": "^0.76.7",
-    "react-native-reanimated": "^3.0.0",
-    "react-native-safe-area-context": "^4.0.0",
+    "react-native": "^0.77.1",
     "rimraf": "^6.0.1",
-    "tailwindcss": "^3.4.17",
     "tsup": "^8.0.1",
     "typescript": "^5.7.3"
   },
   "peerDependencies": {
-    "nativewind": "^4.1.23",
+    "@types/react": ">=18 || ^19",
+    "@types/react-dom": ">=18 || ^19",
     "react": ">=18 || ^19",
     "react-dom": ">=18 || ^19",
-    "react-native": "^0.76.7",
-    "react-native-reanimated": "^3.0.0",
-    "react-native-safe-area-context": "^4.0.0",
-    "tailwindcss": "^3.4.17",
-    "@types/react": ">=18 || ^19",
-    "@types/react-dom": ">=18 || ^19"
+    "react-native": "^0.77.1"
   },
   "peerDependenciesMeta": {
     "react-dom": {
@@ -71,15 +53,6 @@
       "optional": true
     },
     "react-native": {
-      "optional": true
-    },
-    "nativewind": {
-      "optional": true
-    },
-    "react-native-safe-area-context": {
-      "optional": true
-    },
-    "react-native-reanimated": {
       "optional": true
     }
   }

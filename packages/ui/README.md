@@ -7,3 +7,5 @@ To ensure optimal dependency management, we follow these rules:
 
 nativewind가 tailwind v4를 서포트하지 않는다는것이 상당히 치명적임.
 nativewind가 업데이트되면 그때 전체적으로 업데이트가 필요함
+
+## Installed Packages

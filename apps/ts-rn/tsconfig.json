@@ -1,0 +1,15 @@
+{
+  "extends": "@repo/typescript-config/expo-rn",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@repo/ui/*": ["./node_modules/@repo/ui/src/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "babel.config.js",
+    "metro.config.js",
+    "jest.config.js"
+  ]
+}
