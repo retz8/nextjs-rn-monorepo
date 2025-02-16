@@ -1,3 +1,4 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   webpack: (config) => {
@@ -13,7 +14,6 @@ const nextConfig = {
       ".web.tsx",
       ...config.resolve.extensions,
     ];
-
     return config;
   },
 };

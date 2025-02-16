@@ -32,6 +32,6 @@ const styles = StyleSheet.create({
     backgroundColor: "#2f80ed",
   },
   text: {
-    color: "white",
+    color: "pink",
   },
 });
