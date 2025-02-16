@@ -8,7 +8,7 @@ pnpm create:next
 
 This command will generate a new nextjs application in the `apps/web` folder.
 
-Example usage of internal packages:
+Example usage of internal packages (no additional setup is needed):
 
 ```ts
 "use client";
