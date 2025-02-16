@@ -1,22 +1,18 @@
 {
-  "display": "Next.js",
+  "display": "Expo React Native",
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "./base.json",
   "compilerOptions": {
     "target": "es2018",
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "lib": ["DOM", "ESNext"],
     "module": "esnext",
     "moduleResolution": "bundler",
-    "jsx": "preserve",
+    "jsx": "react-native",
     "allowJs": true,
     "incremental": true,
     "esModuleInterop": true,
     "noEmit": true,
     "resolveJsonModule": true,
-    "isolatedModules": true,
-    "skipLibCheck": true,
-    "types": ["react", "react-native-web"]
-  },
-  "include": ["src", "next-env.d.ts"],
-  "exclude": ["node_modules"]
+    "skipLibCheck": true
+  }
 }

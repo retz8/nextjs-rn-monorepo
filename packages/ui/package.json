@@ -1,22 +1,59 @@
 {
+  "private": true,
   "name": "@repo/ui",
-  "version": "0.0.0",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "version": "0.1.0",
+  "description": "UI components with React Native Web for web and native",
+  "author": "Jioh In <ekkicb71@gmail.com>",
+  "license": "MIT",
+  "exports": {
+    "./button": {
+      "types": "./src/button/index.ts",
+      "default": "./dist/button/index.js"
+    },
+    "./card": {
+      "types": "./src/card/index.ts",
+      "default": "./dist/card/index.js"
+    }
+  },
+  "files": [
+    "dist/*"
+  ],
+  "sideEffects": [
+    "*"
+  ],
   "scripts": {
-    "build": "tsup",
     "dev": "tsup --watch",
-    "clean": "rm -rf dist"
+    "build": "tsup --clean ",
+    "clean": "rimraf dist && rimraf node_modules",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@repo/tailwind-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/react": "^18.2.14",
-    "@types/react-native": "^0.73.0",
+    "@types/react": "^18.3.18",
+    "@types/react-native": "0.73.0",
+    "react": "^18.3.1",
+    "react-native": "^0.77.1",
+    "rimraf": "^6.0.1",
     "tsup": "^8.0.1",
-    "typescript": "5.5.4"
+    "typescript": "^5.7.3"
   },
-  "dependencies": {
-    "react": "^18.2.0",
-    "react-native": "0.74.5"
+  "peerDependencies": {
+    "@types/react": ">=18 || ^19",
+    "@types/react-dom": ">=18 || ^19",
+    "react": ">=18 || ^19",
+    "react-dom": ">=18 || ^19",
+    "react-native": "^0.77.1"
+  },
+  "peerDependenciesMeta": {
+    "react-dom": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    },
+    "react-native": {
+      "optional": true
+    }
   }
 }

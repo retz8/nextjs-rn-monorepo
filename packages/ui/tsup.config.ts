@@ -1,15 +1,16 @@
 import { defineConfig, Options } from "tsup";
 
-export default defineConfig((options: Options) => ({
-  entry: {
-    index: "src/index.tsx",
+export default defineConfig((options: Options) => [
+  {
+    entry: ["src/**/index.ts"],
+    banner: {
+      js: '"use client";',
+    },
+    format: ["cjs", "esm"],
+    target: "es2018",
+    dts: true,
+    clean: true,
+    external: ["react"],
+    ...options,
   },
-  banner: {
-    js: "'use client'",
-  },
-  clean: true,
-  format: ["cjs", "esm"],
-  external: ["react"],
-  dts: true,
-  ...options,
-}));
+]);
