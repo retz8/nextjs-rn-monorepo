@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "bare-rn",
-    "slug": "bare-rn",
+    "name": "sample-mobile",
+    "slug": "sample-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

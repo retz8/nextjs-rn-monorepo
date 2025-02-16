@@ -13,7 +13,7 @@ export default function generator(plop) {
     }
   });
 
-  // create a generator
+  // next.js application generator
   plop.setGenerator("next", {
     description: "Generate a new Next.js app with monorepo support",
     // gather information from the user
@@ -82,6 +82,74 @@ export default function generator(plop) {
       actions.push({
         type: "runCommand",
         command: `cd ${appPath} && pnpm install`, // Pass appName as an argument
+        description: `Running install to install dependencies for ${appName}...`,
+      });
+
+      return actions;
+    },
+  });
+
+  // expo react native application generator
+  plop.setGenerator("react-native", {
+    description: "Generate a new Expo React Native app with monorepo support",
+    prompts: [
+      {
+        type: "input",
+        name: "appName",
+        message: "What should we call this app?",
+      },
+    ],
+    actions(answers) {
+      const actions = [];
+      if (!answers) return actions;
+
+      const { appName } = answers;
+      const appPath = `./apps/native/${appName}`;
+
+      // 0. check if the native folder exists
+      if (!fs.existsSync("apps/native")) {
+        fs.mkdirSync("apps/native");
+      }
+
+      // 0. check if the app already exists
+      if (fs.existsSync(appPath)) {
+        throw new Error("App already exists");
+      }
+
+      // 1. run `npx create-expo-app@latest`
+      actions.push({
+        type: "runCommand",
+        command: `pnpm create expo-app ${appPath} --template blank-typescript`,
+      });
+
+      actions.push(() => {
+        const filesToDelete = ["package.json", "tsconfig.json"];
+        filesToDelete.forEach((file) => {
+          const filePath = path.join(appPath, file);
+          if (fs.existsSync(filePath)) {
+            fs.unlinkSync(filePath);
+          }
+        });
+      });
+
+      const data = {
+        appName: appName,
+      };
+
+      // 2. add the template files
+      actions.push({
+        type: "addMany",
+        templateFiles: `templates/native/**`,
+        destination: `./apps/native/{{appName}}`,
+        base: `templates/native`,
+        data,
+        abortOnFail: true,
+      });
+
+      // 3. run `pnpm install`
+      actions.push({
+        type: "runCommand",
+        command: `cd ${appPath} && pnpm install`,
         description: `Running install to install dependencies for ${appName}...`,
       });
 

@@ -1,15 +1,3 @@
-<<<<<<< HEAD:apps/native/App.tsx
-import { View, Text } from "react-native";
-import React from "react";
-
-export default function App() {
-  return (
-    <View>
-      <Text>App</Text>
-    </View>
-  );
-}
-=======
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import { Button } from "@repo/ui/button";
@@ -32,4 +20,3 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
 });
->>>>>>> @{-1}:apps/ts-rn/App.tsx

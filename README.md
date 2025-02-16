@@ -27,6 +27,30 @@ export default function Home() {
 }
 ```
 
+## Generate React Native Application
+
+```bash
+pnpm create:rn
+```
+
+This command will generate a new expo react native application in the `apps/native` folder.
+
+Example usage of internal packages (no additional setup is needed):
+
+```ts
+import { Button } from "@repo/ui/button";
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text>Open up App.tsx to start working on your app!</Text>
+      <StatusBar style="auto" />
+      <Button text="Click me" onClick={() => {}} />
+    </View>
+  );
+}
+```
+
 ## Internal Packages
 
 #### `tsconfig.json`
