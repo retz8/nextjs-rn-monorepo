@@ -13,7 +13,14 @@ export interface ButtonProps {
 
 export function Button({ text, onClick }: ButtonProps) {
   return (
-    <Pressable style={styles.button} onPress={onClick}>
+    <Pressable
+      style={(state) => [
+        styles.button,
+        state.pressed && styles.pressed,
+        state.hovered && styles.hovered,
+      ]}
+      onPress={onClick}
+    >
       <Text style={styles.text}>{text}</Text>
     </Pressable>
   );
@@ -33,5 +40,11 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "pink",
+  },
+  pressed: {
+    backgroundColor: "#1f6feb",
+  },
+  hovered: {
+    backgroundColor: "#1f6feb",
   },
 });
