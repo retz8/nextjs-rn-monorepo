@@ -1,0 +1,9 @@
+{
+  "name": "micro-native",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev",
+    "bundle:ios": "cd host && pnpm bundle:ios",
+    "bundle:android": "cd host && pnpm bundle:android"
+  }
+}
