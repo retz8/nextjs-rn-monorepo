@@ -45,7 +45,7 @@ export default function generator(plop) {
       // 1. run `pnpm create next-app`
       actions.push({
         type: "runCommand",
-        command: `pnpm create next-app@14 ${appPath} --ts --tailwind --eslint --app --src-dir --import-alias "@/*" --skip-install --use-pnpm `,
+        command: `pnpm create next-app@14 ${appPath} --use-pnpm --ts --tailwind --eslint --app --src-dir --import-alias "@/*" --skip-install 2>/dev/null`,
       });
 
       actions.push(() => {
@@ -78,10 +78,9 @@ export default function generator(plop) {
       });
 
       // 4. run `pnpm install`
-      console.log("appPath", appPath);
       actions.push({
         type: "runCommand",
-        command: `cd ${appPath} && pnpm install`, // Pass appName as an argument
+        command: `cd ${appPath} && pnpm install --silent`, // Pass appName as an argument
         description: `Running install to install dependencies for ${appName}...`,
       });
 
@@ -119,7 +118,7 @@ export default function generator(plop) {
       // 1. run `npx create-expo-app@latest`
       actions.push({
         type: "runCommand",
-        command: `pnpm create expo-app ${appPath} --template blank-typescript`,
+        command: `pnpm create expo-app ${appPath} --template blank-typescript --no-install 2>/dev/null`,
       });
 
       actions.push(() => {
@@ -149,7 +148,7 @@ export default function generator(plop) {
       // 3. run `pnpm install`
       actions.push({
         type: "runCommand",
-        command: `cd ${appPath} && pnpm install`,
+        command: `cd ${appPath} && pnpm install --silent`,
         description: `Running install to install dependencies for ${appName}...`,
       });
 

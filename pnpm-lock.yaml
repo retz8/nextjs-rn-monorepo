@@ -21,7 +21,7 @@ importers:
         specifier: ^5.7.3
         version: 5.7.3
 
-  apps/native/sample-mobile:
+  apps/native/sample-rn:
     dependencies:
       '@repo/ui':
         specifier: workspace:*
@@ -35,12 +35,12 @@ importers:
       react:
         specifier: 18.3.1
         version: 18.3.1
+      react-dom:
+        specifier: ^19.0.0
+        version: 19.0.0(react@18.3.1)
       react-native:
         specifier: 0.76.7
         version: 0.76.7(@babel/core@7.26.9)(@babel/preset-env@7.26.9(@babel/core@7.26.9))(@types/react@18.3.18)(react@18.3.1)
-      react-native-web:
-        specifier: 0.19.13
-        version: 0.19.13(react-dom@19.0.0(react@18.3.1))(react@18.3.1)
     devDependencies:
       '@babel/core':
         specifier: ^7.25.2
@@ -51,6 +51,9 @@ importers:
       '@types/react':
         specifier: ~18.3.12
         version: 18.3.18
+      '@types/react-dom':
+        specifier: ^19
+        version: 19.0.3(@types/react@18.3.18)
       '@types/react-native':
         specifier: 0.73.0
         version: 0.73.0(@babel/core@7.26.9)(@babel/preset-env@7.26.9(@babel/core@7.26.9))(@types/react@18.3.18)(react@18.3.1)
@@ -76,7 +79,7 @@ importers:
         specifier: ^19.0.0
         version: 19.0.0(react@19.0.0)
       react-native-web:
-        specifier: 0.19.13
+        specifier: ^0.19.13
         version: 0.19.13(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
     devDependencies:
       '@eslint/eslintrc':
@@ -98,10 +101,10 @@ importers:
         specifier: ^19
         version: 19.0.3(@types/react@19.0.9)
       '@types/react-native-web':
-        specifier: 0.19.0
+        specifier: ^0.19.0
         version: 0.19.0(react@19.0.0)
       babel-plugin-react-native-web:
-        specifier: 0.19.13
+        specifier: ^0.19.13
         version: 0.19.13
       eslint:
         specifier: ^9
@@ -141,13 +144,13 @@ importers:
         specifier: ^18.3.18
         version: 18.3.18
       '@types/react-native':
-        specifier: 0.73.0
+        specifier: ^0.73.0
         version: 0.73.0(@babel/core@7.26.9)(@babel/preset-env@7.26.9(@babel/core@7.26.9))(@types/react@18.3.18)(react@18.3.1)
       '@types/react-native-web':
-        specifier: 0.19.0
+        specifier: ^0.19.0
         version: 0.19.0(@babel/core@7.26.9)(@babel/preset-env@7.26.9(@babel/core@7.26.9))(react@18.3.1)
       babel-plugin-react-native-web:
-        specifier: 0.19.13
+        specifier: ^0.19.13
         version: 0.19.13
       react:
         specifier: ^18.3.1
@@ -1148,7 +1151,7 @@ packages:
 
   '@expo/bunyan@4.0.1':
     resolution: {integrity: sha512-+Lla7nYSiHZirgK+U/uYzsLv/X+HaJienbD5AKX1UQZHYfWaP+9uuQluRB4GrEVWF0GZ7vEVp/jzaOT9k/SQlg==}
-    engines: {'0': node >=0.10.0}
+    engines: {node: '>=0.10.0'}
 
   '@expo/cli@0.22.16':
     resolution: {integrity: sha512-a8Ulbnji9kFatnOtsWGCRs6nMUj9UNC0/WhE74HQdXGDGMn5Pl8eNe3cLMy9G54DdqAmEZmRZpgXmcudT78fEQ==}
@@ -2199,8 +2202,8 @@ packages:
     resolution: {integrity: sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==}
     engines: {node: '>=10'}
 
-  caniuse-lite@1.0.30001699:
-    resolution: {integrity: sha512-b+uH5BakXZ9Do9iK+CkDmctUSEqZl+SP056vc5usa0PL+ev5OHw003rZXcnjNDv3L8P5j6rwT6C0BPKSikW08w==}
+  caniuse-lite@1.0.30001700:
+    resolution: {integrity: sha512-2S6XIXwaE7K7erT8dY+kLQcpa5ms63XlRkMkReXjle+kf6c5g38vyMl+Z5y8dSxOFDhcFe+nxnn261PLxBSQsQ==}
 
   chalk@2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
@@ -3887,10 +3890,6 @@ packages:
     resolution: {integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==}
     engines: {node: '>= 0.6'}
 
-  mime-db@1.53.0:
-    resolution: {integrity: sha512-oHlN/w+3MQ3rba9rqFr6V/ypF10LSkdwUysQL7GkXoTgIWeV+tcXGA852TBxH+gsh8UWoyhR1hKcoMJTuWflpg==}
-    engines: {node: '>= 0.6'}
-
   mime-types@2.1.35:
     resolution: {integrity: sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==}
     engines: {node: '>= 0.6'}
@@ -4730,10 +4729,6 @@ packages:
 
   send@0.19.0:
     resolution: {integrity: sha512-dW41u5VfLXu8SJh5bwRmyYUbAoSB3c9uQh6L8h/KtsFREPWpbX1lrljJo186Jc4nmci/sGUZ9a0a0J2zgfq2hw==}
-    engines: {node: '>= 0.8.0'}
-
-  send@0.19.1:
-    resolution: {integrity: sha512-p4rRk4f23ynFEfcD9LA0xRYngj+IyGiEYyqqOak8kaN0TvNmuxC2dcVeBn62GpCeR2CpWqyHCNScTP91QbAVFg==}
     engines: {node: '>= 0.8.0'}
 
   sentence-case@2.1.1:
@@ -6652,7 +6647,7 @@ snapshots:
       resolve-from: 5.0.0
       resolve.exports: 2.0.3
       semver: 7.7.1
-      send: 0.19.1
+      send: 0.19.0
       slugify: 1.6.6
       source-map-support: 0.5.21
       stacktrace-parser: 0.1.10
@@ -8043,7 +8038,7 @@ snapshots:
 
   browserslist@4.24.4:
     dependencies:
-      caniuse-lite: 1.0.30001699
+      caniuse-lite: 1.0.30001700
       electron-to-chromium: 1.5.101
       node-releases: 2.0.19
       update-browserslist-db: 1.1.2(browserslist@4.24.4)
@@ -8136,7 +8131,7 @@ snapshots:
 
   camelcase@6.3.0: {}
 
-  caniuse-lite@1.0.30001699: {}
+  caniuse-lite@1.0.30001700: {}
 
   chalk@2.4.2:
     dependencies:
@@ -8285,7 +8280,7 @@ snapshots:
 
   compressible@2.0.18:
     dependencies:
-      mime-db: 1.53.0
+      mime-db: 1.52.0
 
   compression@1.8.0:
     dependencies:
@@ -10239,8 +10234,6 @@ snapshots:
 
   mime-db@1.52.0: {}
 
-  mime-db@1.53.0: {}
-
   mime-types@2.1.35:
     dependencies:
       mime-db: 1.52.0
@@ -10327,7 +10320,7 @@ snapshots:
       '@next/env': 14.2.24
       '@swc/helpers': 0.5.5
       busboy: 1.6.0
-      caniuse-lite: 1.0.30001699
+      caniuse-lite: 1.0.30001700
       graceful-fs: 4.2.11
       postcss: 8.4.31
       react: 19.0.0
@@ -11270,24 +11263,6 @@ snapshots:
       depd: 2.0.0
       destroy: 1.2.0
       encodeurl: 1.0.2
-      escape-html: 1.0.3
-      etag: 1.8.1
-      fresh: 0.5.2
-      http-errors: 2.0.0
-      mime: 1.6.0
-      ms: 2.1.3
-      on-finished: 2.4.1
-      range-parser: 1.2.1
-      statuses: 2.0.1
-    transitivePeerDependencies:
-      - supports-color
-
-  send@0.19.1:
-    dependencies:
-      debug: 2.6.9
-      depd: 2.0.0
-      destroy: 1.2.0
-      encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
       fresh: 0.5.2

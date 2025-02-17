@@ -7,7 +7,7 @@ export default function App() {
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
-      <Button text="Click me" onClick={() => {}} />
+      <Button text="Click me" onClick={() => console.log("Button clicked")} />
     </View>
   );
 }
