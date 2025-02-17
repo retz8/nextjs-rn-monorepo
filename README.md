@@ -1,5 +1,16 @@
 # Nextjs + ReactNative Monorepo Micro Frontend
 
+## Getting Started
+
+```bash
+git clone https://github.com/retz8/nextjs-rn-microfrontend.git
+cd nextjs-rn-microfrontend
+```
+
+```bash
+pnpm install
+```
+
 ## Generate Nextjs Application
 
 ```bash
