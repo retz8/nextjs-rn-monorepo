@@ -1,5 +1,11 @@
 # Nextjs + ReactNative Monorepo Micro Frontend
 
+## Micro Frontend
+
+### TODO
+
+- First, need to figure out how to do Module Federation on React Native
+
 ## Generate Nextjs Application
 
 ```bash
