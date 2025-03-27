@@ -1,4 +1,4 @@
-# Nextjs + ReactNative Monorepo Micro Frontend
+# Nextjs + ReactNative Monorepo
 
 ## Getting Started
 
